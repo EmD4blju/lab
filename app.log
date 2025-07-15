@@ -1,0 +1,4 @@
+2025-07-15 11:15:56 | DEBUG | app | Debug message (should only be in file)
+2025-07-15 11:15:56 | INFO | app | Info message
+2025-07-15 11:15:56 | WARNING | app | Warning message
+2025-07-15 11:15:56 | ERROR | app | Error occurred
