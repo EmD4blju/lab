@@ -7,5 +7,11 @@ requires-python = ">=3.12"
 dependencies = [
     "colorlog>=6.9.0",
     "dotenv>=0.9.9",
+    "flask>=3.1.1",
+    "flask-cors>=6.0.1",
+    "langchain-ollama>=0.3.6",
+    "langgraph>=0.6.4",
+    "pydantic>=2.11.7",
+    "pyjwt>=2.10.1",
     "pyyaml>=6.0.2",
 ]
