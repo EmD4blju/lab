@@ -1,6 +1,0 @@
-version: 1
-loggers:
-  user_logger:
-    level: WARNING
-    handlers: []
-    propagate: no
