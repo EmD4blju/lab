@@ -19,7 +19,10 @@ def main():
             'Gaming connects people worldwide through strategy, creativity, and shared adventures.',
             'Food brings people together, offering comfort, culture, and creativity in every bite.',
             'Music speaks the language of emotion, connecting hearts through rhythm and melody.',
-            'Sport teaches discipline, teamwork, and the thrill of striving toward greatness.'
+            'Sport teaches discipline, teamwork, and the thrill of striving toward greatness.',
+            'Queen',
+            'King',
+            'Ace'
         ],
         metadatas=[
             {'topic': 'sport'},
@@ -27,9 +30,12 @@ def main():
             {'topic': 'gaming'},
             {'topic': 'food'},
             {'topic': 'music'},
-            {'topic': 'sport'}
+            {'topic': 'sport'},
+            {'topic': 'people'},
+            {'topic': 'people'},
+            {'topic': 'people'}
         ],
-        ids=['doc1', 'doc2', 'doc3', 'doc4', 'doc5', 'doc6']
+        ids=['doc1', 'doc2', 'doc3', 'doc4', 'doc5', 'doc6', 'doc7', 'doc8', 'doc9']
     )
     
     # document_idx -> metadata_idx -> ids_idx
@@ -40,7 +46,7 @@ def query_db(text:str):
     
     return collection.query(
         query_texts=[text],
-        n_results=2
+        n_results=3
     )
     
     
@@ -48,5 +54,5 @@ def query_db(text:str):
 if __name__ == "__main__":
     main()
     pprint(query_db(
-        text='gaming'
+        text='Let us play cards!'
     ))
