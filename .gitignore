@@ -11,3 +11,7 @@ wheels/
 
 # Credentials
 .env
+
+# Generated model and metrics files
+model.pkl
+metrics.json
