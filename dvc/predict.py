@@ -9,7 +9,7 @@ def main():
     # Load the trained model and scaler
     print("Loading model...")
     try:
-        model_data = joblib.load('dvc/models/model.pkl')
+        model_data = joblib.load('dvc/models/rf/model.pkl')
         model = model_data['model']
         scaler = model_data['scaler']
         feature_names = model_data['feature_names']
@@ -17,6 +17,11 @@ def main():
     except FileNotFoundError:
         print("Error: model.pkl not found. Please run train_model.py first.")
         return
+    
+    # Print model parameters
+    print("\nModel parameters:")
+    for param, value in model.get_params().items():
+        print(f"  {param}: {value}")
     
     print("\n" + "=" * 60)
     print("Random Forest Iris Classifier - Prediction Tool")
