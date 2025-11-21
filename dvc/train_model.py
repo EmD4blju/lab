@@ -79,7 +79,7 @@ def main():
     
     # Save metrics to JSON file
     print("Saving metrics to metrics.json...")
-    with open('metrics.json', 'w') as f:
+    with open('dvc/models/rf/metrics.json', 'w') as f:
         json.dump(metrics, f, indent=4)
     
     # Save the model and scaler to PKL file using joblib
@@ -90,7 +90,7 @@ def main():
         'feature_names': iris.feature_names,
         'target_names': iris.target_names.tolist()
     }
-    joblib.dump(model_data, 'model.pkl')
+    joblib.dump(model_data, 'dvc/models/rf/model.pkl')
     
     print("\nTraining complete!")
     print(f"Model saved to: model.pkl")

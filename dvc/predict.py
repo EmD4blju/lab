@@ -9,7 +9,7 @@ def main():
     # Load the trained model and scaler
     print("Loading model...")
     try:
-        model_data = joblib.load('model.pkl')
+        model_data = joblib.load('dvc/models/model.pkl')
         model = model_data['model']
         scaler = model_data['scaler']
         feature_names = model_data['feature_names']
