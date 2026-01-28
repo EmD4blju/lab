@@ -9,13 +9,13 @@ class Node:
     
 
 
-class LinkedList:
+class SingleLinkedList:
 
     def __init__(self):
         self.head = None
         self.tail = None
         
-    def append(self, value):
+    def append(self, value): #~ -> O(1)
         new_node = Node(value)
         if not self.head:
             self.head = new_node
@@ -24,7 +24,7 @@ class LinkedList:
             self.tail.next = new_node
             self.tail = new_node
     
-    def prepend(self, value):
+    def prepend(self, value): #~ -> O(1)
         new_node = Node(value)
         if not self.head:
             self.head = new_node
@@ -33,7 +33,7 @@ class LinkedList:
             new_node.next = self.head
             self.head = new_node        
     
-    def pop_head(self):
+    def pop_head(self): #~ -> O(1)
         if not self.head:
             return None
         
@@ -46,8 +46,30 @@ class LinkedList:
         return popped_value
         
     
-    def pop_tail(self):
-        pass
+    def pop_tail(self): #! -> O(n)
+        if not self.head:
+            return None
+        
+        popped_value = self.tail.value
+
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+            return popped_value
+        
+        track = self.head
+        
+        while track.next != self.tail:
+            track = track.next
+            
+        track.next = None
+        self.tail = track
+        
+        return popped_value
+        
+        
+        
+        
     
     def delete(self, pos_idx):
         pass
