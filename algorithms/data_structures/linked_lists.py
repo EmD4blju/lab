@@ -67,9 +67,34 @@ class SingleLinkedList:
         
         return popped_value
         
-        
-        
-        
     
-    def delete(self, pos_idx):
-        pass
+    def delete(self, pos_idx): #! -> O(n)
+        if not self.head or pos_idx < 0: # If list is empty or pos_idx is negative just return None
+            return None
+        
+        if pos_idx == 0: # If pos_idx is 0 then use O(1) pop_head() function
+            return self.pop_head() 
+    
+        track = self.head # Tracks current element - last one will be to delete
+        pre_track = None # Looks at previous element
+            
+        while pos_idx > 0: # When pos_idx reaches 0, track is the element do delete & pre_track is the previous element of it
+            pre_track = track
+            track = track.next
+            if not track: # If track is None then the pos_idx is out of bounds
+                return None
+            pos_idx -= 1
+        
+        if track == self.tail: # If track is tail then set pre_track as a tail
+            pre_track.next = None
+            self.tail = pre_track
+        else: # If track is in the middle then connect pre_track with track's next element
+            pre_track.next = track.next
+            track.next = None
+        
+        return track.value
+            
+        
+            
+        
+            
