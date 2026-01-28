@@ -93,8 +93,3 @@ class SingleLinkedList:
             track.next = None
         
         return track.value
-            
-        
-            
-        
-            
