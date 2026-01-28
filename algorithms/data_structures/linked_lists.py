@@ -78,7 +78,7 @@ class SingleLinkedList:
         track = self.head # Tracks current element - last one will be to delete
         pre_track = None # Looks at previous element
             
-        while pos_idx > 0: # When pos_idx reaches 0, track is the element do delete & pre_track is the previous element of it
+        while pos_idx > 0: # When pos_idx reaches 0, track is the element to delete & pre_track is the previous element of it
             pre_track = track
             track = track.next
             if not track: # If track is None then the pos_idx is out of bounds
