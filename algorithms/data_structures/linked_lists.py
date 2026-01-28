@@ -34,7 +34,17 @@ class LinkedList:
             self.head = new_node        
     
     def pop_head(self):
-        pass
+        if not self.head:
+            return None
+        
+        popped_value = self.head.value
+        self.head = self.head.next
+        
+        if not self.head:
+            self.tail = None
+        
+        return popped_value
+        
     
     def pop_tail(self):
         pass
