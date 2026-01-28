@@ -1,9 +1,0 @@
-
-2025-07-17 17:30:08,453 - my_app_logger - INFO - To jest INFO
-2025-07-17 17:30:08,453 - my_app_logger - WARNING - To jest WARNING
-2025-07-17 17:30:08,453 - my_app_logger - ERROR - To jest ERROR
-2025-07-17 17:30:08,453 - my_app_logger - CRITICAL - To jest CRITICAL
-2025-07-17 17:30:30,610 - my_app_logger - INFO - To jest INFO
-2025-07-17 17:30:30,610 - my_app_logger - WARNING - To jest WARNING
-2025-07-17 17:30:30,610 - my_app_logger - ERROR - To jest ERROR
-2025-07-17 17:30:30,610 - my_app_logger - CRITICAL - To jest CRITICAL
