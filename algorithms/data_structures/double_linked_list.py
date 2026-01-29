@@ -15,7 +15,7 @@ class Node:
     
 
 class DoubleLinkedList:
-    """This class constitues implementation of **Double Linked List** data structure.
+    """This class constitutes implementation of **Double Linked List** data structure.
     """
     
     def __init__(self):
