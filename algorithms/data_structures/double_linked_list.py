@@ -124,32 +124,18 @@ class DoubleLinkedList:
         elif pos_idx == len(self)-1: #~ If pos_idx is at tail
             return self.pop_tail()
             
-        # if pos_idx < len(self)//2: #~ If pos_idx is closer to head
-        #     # [+1, +2, 3, 4]
-        #     # [+1, +2, 3, 4, 5]
-        #     # [+1, +2, +3, 4, 5, 6]
-        #     print("POS_IDX HEAD")
-        #     current_node = self.head
-        #     while pos_idx > 0:
-        #         current_node = current_node.next
-        #         pos_idx -= 1
-        #     current_node.prev.next, current_node.next.prev = current_node.next, current_node.prev
-        # else: #~ If pos_idx is closer to tail
-        #     print("POS_IDX TAIL")
-        #     # 0,1,2,+3,+4
-        #     # p=2, l=1
-        #     # p=1, l=1
-        #     current_node = self.tail
-        #     while pos_idx > len(self)//2-1:
-        #         current_node = current_node.prev
-        #         pos_idx -= 1
-        #     current_node.prev.next, current_node.next.prev = current_node.next, current_node.prev
-        
-        current_node = self.head
-        while pos_idx > 0:
-            current_node = current_node.next
-            pos_idx -= 1
-        current_node.prev.next, current_node.next.prev = current_node.next, current_node.prev
+        if pos_idx < len(self)//2: #~ If pos_idx is closer to head
+            current_node = self.head
+            while pos_idx > 0:
+                current_node = current_node.next
+                pos_idx -= 1
+            current_node.prev.next, current_node.next.prev = current_node.next, current_node.prev
+        else: #~ If pos_idx is closer to tail
+            current_node = self.tail
+            while pos_idx > 0:
+                current_node = current_node.prev
+                pos_idx -= 1
+            current_node.prev.next, current_node.next.prev = current_node.next, current_node.prev
         
         self._len -= 1
         
