@@ -1,4 +1,3 @@
-import pytest
 from algorithms.data_structures.double_linked_list import DoubleLinkedList, Node
 
 
