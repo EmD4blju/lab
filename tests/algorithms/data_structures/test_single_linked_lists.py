@@ -1,5 +1,5 @@
 import pytest
-from algorithms.data_structures.linked_lists import SingleLinkedList, Node
+from algorithms.data_structures.single_linked_list import SingleLinkedList, Node
 
 
 class TestNode:
