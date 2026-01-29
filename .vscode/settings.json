@@ -1,5 +1,5 @@
 {
-  "python.testing.pytestArgs": ["tests", "--color=yes"],
+  "python.testing.pytestArgs": ["tests", "--color=yes", "-s"],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "python.REPL.enableREPLSmartSend": false

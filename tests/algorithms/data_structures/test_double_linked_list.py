@@ -411,6 +411,8 @@ class TestDoubleLinkedList:
         dll.append(2)
         dll.append(3)
         
+        print(f'LEN={len(dll)}')
+        
         result = dll.delete(2)
         assert result == 3
         assert dll.head.value == 1
